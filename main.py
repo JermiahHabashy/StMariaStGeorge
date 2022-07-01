@@ -1,3 +1,4 @@
+import os
 import flask
 from flask import Flask, render_template, request, redirect, url_for, session
 from flask_bootstrap import Bootstrap
@@ -9,7 +10,7 @@ from sqlalchemy import join, ForeignKey, select
 import csv
 
 app = flask.Flask(__name__)
-app.config['SECRET_KEY'] = 'giu94c478d5ze6ge1r6eq39f'
+app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 
 Bootstrap(app)
 
@@ -65,11 +66,11 @@ class CategoryFR(db.Model):
 db.session.commit()
 db.create_all()
 
+
 # TODO: schrijf script dat andere talen naar foodEND en foodFR importeert
 # 		vervang , die tussen "" staan door een è via word macro
 # 		copy paste de waarden
 #		scrhijf code die è vervangt door ,
-
 
 
 @app.route('/')
@@ -77,6 +78,7 @@ def nl():
 	return flask.render_template("indexNL.html",
 								 all_cat=db.session.query(CategoryNL).all(),
 								 food_list=db.session.query(FoodNL))
+
 
 @app.route('/eng')
 def eng():
@@ -92,6 +94,5 @@ def fr():
 								 food_list=db.session.query(FoodFR))
 
 
-
 if __name__ == "__main__":
-	app.run(debug=True)
+	app.run()
