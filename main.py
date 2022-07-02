@@ -15,7 +15,7 @@ app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 Bootstrap(app)
 
 # CONNECT TO DB
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///menus.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///static/database/menus.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db: SQLAlchemy = SQLAlchemy(app)
 
