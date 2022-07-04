@@ -62,9 +62,6 @@ db.create_all()
 
 
 # TODO:
-#		2. vertaal word doc naar FRA
-#		3. copy waarden van word indexFR
-#		4. copy waarden van word naar foodFR en categoryFR
 #		5. zet fotos in imgs
 #		6. reformat folder structure
 #		6a. nieuwe prijzen
