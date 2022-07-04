@@ -1,13 +1,7 @@
 import os
 import flask
-from flask import Flask, render_template, request, redirect, url_for, session
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import column_property
-from sqlalchemy import join, ForeignKey, select
-
-import csv
 
 app = flask.Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
@@ -67,10 +61,16 @@ db.session.commit()
 db.create_all()
 
 
-# TODO: schrijf script dat andere talen naar foodEND en foodFR importeert
-# 		vervang , die tussen "" staan door een è via word macro
-# 		copy paste de waarden
-#		scrhijf code die è vervangt door ,
+# TODO:
+#		2. vertaal word doc naar FRA
+#		3. copy waarden van word indexFR
+#		4. copy waarden van word naar foodFR en categoryFR
+#		5. zet fotos in imgs
+#		6. reformat folder structure
+#		6a. nieuwe prijzen
+#		7. zet op hostinger
+# 		8. contact Ashraf voor domeinnaam
+#		9. maak factuur op
 
 
 @app.route('/')
