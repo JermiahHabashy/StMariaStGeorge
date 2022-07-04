@@ -62,8 +62,6 @@ db.create_all()
 
 
 # TODO:
-#		5a. totaalprijs 3 gangen menu
-#		6. nieuwe prijzen
 #		6a. reformat folder structure
 #		7. zet op hostinger
 # 		8. contact Ashraf voor domeinnaam
