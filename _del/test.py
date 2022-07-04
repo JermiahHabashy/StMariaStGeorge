@@ -1,140 +1,140 @@
 import csv
 import pandas as pd
 
-lines = '''Kids spaghetti,(± 30 min. prep time)
-Grilled chicken breast,
-Bitterballs,
+lines = '''Spaghetti pour enfants, (± 30 min. de préparation)
+Poitrine de poulet grillée,
+Boulettes amères,
 Frikandel,
 Gyros,
-Spareribs,
-Pizza bambino,With a children's ice cream as dessert
-Gelato bambino,Children's ice cream
-Banana Royal,”Vanilla cream ice with banana, chocolate and whipped cream”
-Dame blanche,Vanilla ice cream with chocolate and whipped cream
-Greek yogurt with honey and walnuts,
-Chocolate moelleux with vanilla ice cream,
-Margharita,Tomato and cheese
-Cipola, "Tomato, cheese and onions"
-Salami, "Tomato, cheese and salami"
-Proscuito, "Tomato, cheese and ham"
-Funghi, "Tomato, cheese and mushrooms"
-Proscuito & Funghi, "Tomato, cheese, ham and mushrooms"
-Capriccosa, "Tomato, cheese, salami and mushrooms"
-Americana, "Tomato, cheese, salami and ham"
-Peperoni, "Tomato, cheese, bell pepper and chili peppers"
-Napolitana, "Tomato, cheese, anchovies and olives"
-Hawaii, "Tomato, cheese, pineapple and ham"
-Siciliana, "Tomato, cheese, artichokes, bell pepper and olives"
-Tonno, "Tomato, cheese, tuna and onions"
-Bolognaise, "Tomato, cheese, minced meat and onions"
-Bella italia, "Tomato, cheese, minced meat and egg"
-Boromea, "Tomato, cheese, ham, mushrooms and egg"
-Vegetaria, "Tomato, cheese, bell pepper, mushrooms, artichokes, olives and onions"
-Calzone, "Dense folded pizza with tomato, cheese, mushrooms, artichokes, minced meat and ham"
-Shoarma, "Tomato, cheese, shoarma, bell pepper and onions"
-Quattro stagioni, "Tomato, cheese, peppers, mushrooms, ham and salami"
-Lucky luciano, "Tomato, cheese, mushrooms, onions, bacon and egg"
-Maffiosa, "Tomato, cheese, mushrooms, bell pepper, onions and bacon"
-Pollo, "Tomato, cheese, chicken shawarma, mushrooms and onions"
-O Solo Mio, "Tomato, cheese, mushrooms, artichokes, bell pepper, onions, ham and eggs"
-Marinara, "Tomato, cheese, seafood and anchovies"
-Quattro formagi,Tomato with 4 italian cheeses
-Pizza Scampi, "Tomato, cheese and scampi"
-Pizza Gerguis,Specialty of the house
-Extra meat,
-Extra vegetables per type,
-Extra arugula,
-Kalamaria, squid with fresh sauce
-Solomos,Stewed salmon from the grill with lemon and dill sauce (+30 min. prep time)
-Media saganaki, mussels with fresh tomatoes in a spicy sauce
-Fritto misto,Different kinds of fried fish
-Gerides saganaki,Fried prawns in a spicy sauce
-Scampi griglia,Grilled king prawns
-Alla napolitan,Tomato sauce
-Alla funghi,Tomato sauce with mushrooms
-Alla bolognaise,Tomato sauce with minced meat
-Alla carbonara, "Creamy sauce with cheese, ham"
-Santa Maria,Wine sauce with garlic and basil
-Alla marinara,Tomato sauce with seafood
-Quattro formagio, Cream sauce with 4 kinds of cheese
-Alla polio, "Creamy sauce with pieces of chicken, tomato, onion, mushroom and pesto"
-Alla scampi, "Cream sauce with fried scampi, fresh garlic, basil and pesto"
-Alla vegetaria, "Tomato sauce with fresh vegetables, garlic and basil"
-Alla vongole, "Wine sauce, parsley, garlic, onions, tomato, pesto and basil"
-Moussaka, "Béchamel sauce with seasoned minced meat, eggplants, potatoes and cheese"
-Lasagna, "Slices of dough with bechamel sauce, minced meat and cheese"
-Stifado,Pieces of lamb and shallots in a spicy sauce
-Youvetsi,Lamb with Greek pasta in a tomato sauce.
-Gyros,Pork cutlets with tzatziki.
-Souvlaki, skewered meat with gyros
-Pollo ala banna,Chicken pieces with bell pepper and fried mushrooms in cream sauce
-Scaloppa pizaioli,Veal with spicy sauce
-Scaloppa al funghi,Veal and sautéed mushrooms in cream sauce
-Souvlaki speciale,Pork with bell pepper and fried mushrooms in pepper sauce
-La Cairo,Sarma and ribs
-Mina,Shawarma and chicken breast
-Gerguis, "Arms, chicken and shaslick"
-Cyril, "Shoarma, lamb chop and chicken breast"
-Corfu, "Lamb cutlet, souvlaki, steak and gyros"
-Agapi, "Souvlaki, chicken breast, steak and gyros"
-Rhodes mix, "Chicken breast, spareribs, pork and lamb chops"
-Pharao mixed fish, "Grilled salmon, prawns and kalamari (±30 min. prep time)"
-Alexandros, "Chicken breast, souvlaki, pork tenderloin, steak and gyros"
-Rhodes mix, "Chicken breast, spare ribs, pork and lamb chop"
-Crete, "Chicken breast, lamb chop, souvlaki, steak and gyros"
-Pharao mixed fish, "Grilled salmon, prawns and kalamari (± 30 min.)"
+Côtes levées,
+Pizza bambino,Avec une glace pour enfants en dessert
+Gelato bambino,Glace pour enfants
+Banana Royal, "Glace à la vanille avec banane, chocolat et crème fouettée"
+Dame blanche,Glace vanille avec chocolat et crème fouettée
+Yaourt grec au miel et aux noix,
+Moelleux au chocolat avec de la glace à la vanille,
+Margharita,Tomate et fromage
+Cipola, "Tomate, fromage et oignons"
+Salami, "Tomate, fromage et salami"
+Proscuito, "Tomate, fromage et jambon"
+Funghi, "Tomate, fromage et champignons"
+Proscuito & Funghi, "Tomate, fromage, jambon et champignons"
+Capriccosa: "Tomate, fromage, salami et champignons"
+Americana, "Tomate, fromage, salami et jambon"
+Peperoni, "Tomate, fromage, poivron et piments"
+Napolitana, "Tomate, fromage, anchois et olives"
+Hawaii, "Tomate, fromage, ananas et jambon"
+Siciliana, "Tomate, fromage, artichauts, poivrons et olives"
+Tonno, "Tomate, fromage, thon et oignons"
+Bolognaise, "Tomate, fromage, viande hachée et oignons"
+Bella italia, "Tomate, fromage, viande hachée et œuf"
+Boromea, "Tomate, fromage, jambon, champignons et oeuf"
+Vegetaria, "Tomate, fromage, poivron, champignons, artichauts, olives et oignons"
+Calzone, "Pizza dense et pliée avec tomate, fromage, champignons, artichauts, viande hachée et jambon"
+Shoarma, "Tomate, fromage, shoarma, poivron et oignons"
+Quattro stagioni, "Tomate, fromage, poivrons, champignons, jambon et salami"
+Lucky luciano, "Tomate, fromage, champignons, oignons, bacon et oeuf"
+Maffiosa, "Tomate, fromage, champignons, poivron, oignons et bacon"
+Pollo, "Tomate, fromage, poulet shawarma, champignons et oignons"
+O Solo Mio, "Tomate, fromage, champignons, artichauts, poivron, oignons, jambon et oeufs"
+Marinara, "Tomate, fromage, fruits de mer et anchois"
+Quattro formagi, "Tomate avec 4 fromages italiens
+Pizza Scampi, "Tomate, fromage et langoustines"
+Pizza Gerguis,Spécialité de la maison
+Extra viande,
+Extra légumes par type,
+Extra roquette,
+Kalamaria, calamars avec sauce fraîche
+Solomos,Saumon cuit sur le grill avec une sauce au citron et à l'aneth (+30 min. de préparation)
+Media saganaki, moules avec tomates fraîches dans une sauce épicée
+Fritto misto,Différentes sortes de poissons frits
+Gerides saganaki,Crevettes frites dans une sauce épicée
+Scampi griglia,Crevettes royales grillées
+Alla napolitan,Sauce tomate
+Alla funghi,Sauce tomate aux champignons
+Alla bolognaise,Sauce tomate à la viande hachée
+Alla carbonara, "Sauce crémeuse au fromage et au jambon"
+Santa Maria,Sauce au vin, à l'ail et au basilic
+Alla marinara,Sauce tomate aux fruits de mer
+Quattro formagio, Sauce crémeuse avec 4 sortes de fromage
+Alla polio, "Sauce crémeuse avec morceaux de poulet, tomates, oignons, champignons et pesto"
+Alla scampi, "Sauce crémeuse aux scampis frits, ail frais, basilic et pesto"
+Alla vegetaria, "Sauce tomate aux légumes frais, ail et basilic"
+Alla vongole, "Sauce au vin, persil, ail, oignons, tomate, pesto et basilic"
+Moussaka, "Sauce béchamel avec viande hachée assaisonnée, aubergines, pommes de terre et fromage"
+Lasagne, "Tranches de pâte avec sauce béchamel, viande hachée et fromage"
+Stifado,Morceaux d'agneau et échalotes dans une sauce épicée
+Youvetsi,Agneau avec des pâtes grecques dans une sauce tomate.
+Gyros, escalopes de porc avec tzatziki.
+Souvlaki, brochettes de viande avec gyros.
+Pollo ala banna,Morceaux de poulet avec poivron et champignons frits dans une sauce à la crème
+Scaloppa pizaioli,Veau avec sauce épicée
+Scaloppa al funghi,Veau et champignons sautés dans une sauce à la crème
+Souvlaki speciale,Porc avec poivron et champignons sautés dans une sauce au poivre
+La Cairo,Sarma et travers de porc
+Mina,Shawarma et poitrine de poulet
+Gerguis, "Armes, poulet et shaslick"
+Cyrille, "Shoarma, côtelette d'agneau et blanc de poulet"
+Corfou, "Côtelette d'agneau, souvlaki, steak et gyros"
+Agapi, "Souvlaki, blanc de poulet, steak et gyros"
+Rhodes mixtes, "Poitrine de poulet, côtes levées, côtelettes de porc et d'agneau"
+Pharao mix fish, "Saumon, crevettes et kalamari grillés (±30 min. de préparation)"
+Alexandros, "Blanc de poulet, souvlaki, filet de porc, steak et gyros"
+Rhodes mix, "Poitrine de poulet, spare ribs, côtelette de porc et d'agneau"
+Crète, "Poitrine de poulet, côtelette d'agneau, souvlaki, steak et gyros"
+Mélange de poissons Pharao, "Saumon, crevettes et kalamari grillés (± 30 min.)"
 Shoarma,
-Chicken shoarma,
-Chicken breast from the grill,
+Shoarma de poulet,
+Poitrine de poulet grillée,
 Shaslick,
-Lamb chop,
-Falafel (vegetarian),
-Extra vegetables (per variety), "Onion, bell pepper, mushroom"
+Côtelette d'agneau,
+Falafel (végétarien),
+Légumes supplémentaires (par variété), "Oignon, poivron, champignon"
 Nature,
-Sweet - slightly spicy,
-Coconut,
-Fire,
-Hawai,
-Jack Daniels Honey, with the real Jack Daniels whiskey
-Jack Daniels Smokey, with the genuine Jack Daniels whiskey
-Steak with fried mushroom,± 250 gr
-Sirloin steak,± 250 gr
-Veal T-bone,± 350 gr
-Beef T-bone,± 500 gr
-Rib eye,± 250 gr
-Mushroom Cream Sauce,
-Pepper Cream Sauce,
-Pomodoro,Fresh tomato soup
-Peperies,Elies Greek peppers and olives
-Tzatziki, "Quark with cucumber, fresh garlic and herbs"
-Feta cheese,Original sheep cheese
-Sardeles,Fried fish with fresh garlic
-Funghi trifolati,Fresh garlic mushrooms in cream sauce
-Kalamaria, squid with fresh sauce
-Gari des saganaki,Fried scampi with spicy tomato sauce.
-Feta saganaki,Fried feta cheese
-Bread with herb butter,
-Scampi cream, "In cream sauce with garlic, pesto & basil"
-Egyptian salad,Mixed salad
-Tomato salad, "Salad with tomatoes, fresh garlic and onions"
-Greek salad,Original greek salad with feta cheese
-Italian salad, Tomato and mozzarella
-Chicken salad, "Chicken pieces, salad, tomato, cucumber and yogurt dressing"
-Tonno salad,Tuna salad
-Surf n Turf, "Scampi, bacon, tomato, cucumber, crouttons and truffle mayonnaise"
-Appetizer, "Choose between: Mozzarella salad with walnuts and croutons | Pork tenderloin salad with pork chops 
-Salad of pork with orange dressing | Scampi in cream sauce with basil and croutons 
-Scampi in cream sauce with basil and garlic"
-Main course, "Choose between: Pork tenderloin with mushroom cream sauce | Entrecote with red wine sauce 
-Sirloin steak with red wine sauce | Salmon with tagliatelle in cream sauce 
-Salmon with tagliatelle in cream sauce"
-Dessert, "Choose between: Tri of bavarois | 
-Chocolate moelleux | 
-Coffee/tea with liqueur"
-Total price,
-ltalian red wine (Montepulciano d'abruzzo), "In addition to a beautiful ruby color, it possesses an intensely fruity nose. Pleasantly dry and full-bodied, it goes well with grilled meats, pastas and spicy cheeses."
-Greek Red Wine (Mavrodaphni of Patra), "This sweet, red wine has a beautiful dark ruby color. The finish contains aromas and flavors of black raisins and plum. Mavrodaphni is also known as the Greek port. This red sweet wine will take your taste buds on a vacation to Greece."
-Greek White Wine (Tsantali retsina), "Dry, white retsina wine. The nose is lively with aromas of citrus, pear, apple and fresh pine resin. Nice and refreshing and dry on the palate, which leads to a briny finish."
+Doux - légèrement épicé,
+Noix de coco,
+Feu,
+Hawaï,
+Jack Daniels Honey, avec le vrai whisky Jack Daniels.
+Jack Daniels Smokey, avec le vrai whisky Jack Daniels
+Steak avec champignons frits,± 250 gr
+Bifteck de surlonge,± 250 gr
+T-bone de veau,± 350 gr
+Côte de boeuf,± 500 gr
+Côte de boeuf,± 250 gr
+Sauce crème aux champignons,
+Sauce crème au poivre,
+Pomodoro,Soupe de tomates fraîches
+Peperies,Elies poivrons grecs et olives
+Tzatziki, "Séré avec concombre, ail frais et fines herbes"
+Feta,Fromage de brebis original
+Sardeles,Poisson frit à l'ail frais
+Funghi trifolati,Champignons à l'ail frais dans une sauce à la crème
+Kalamaria, calamars avec sauce fraîche
+Gari des saganaki,Scampi frits avec une sauce tomate épicée.
+Feta saganaki, fromage feta frit.
+Pain avec beurre aux herbes,
+Scampi cream, "Dans une sauce à la crème avec de l'ail, du pesto et du basilic"
+Salade égyptienne, Salade mixte
+Salade de tomates, "Salade avec des tomates, de l'ail frais et des oignons"
+Salade grecque, Salade grecque originale avec du fromage feta
+Salade italienne, Tomate et mozzarella
+Salade de poulet, "Morceaux de poulet, salade, tomate, concombre et sauce au yaourt"
+Salade de thon, "Salade de thon
+Surf n Turf, "Scampi, bacon, tomate, concombre, croûtons et mayonnaise à la truffe"
+Entrée, "Choisissez entre: Salade de mozzarella avec noix et croûtons | Salade de filet de porc avec côtelettes de porc. 
+Salade de porc avec vinaigrette à l'orange | Scampi à la crème avec basilic et croûtons 
+Scampi à la crème au basilic et à l'ail "
+Plat principal, "Choisissez entre: Filet de porc à la crème de champignons | Entrecôte à la sauce au vin rouge 
+Entrecôte à la sauce au vin rouge | Saumon avec tagliatelles à la crème 
+Saumon avec tagliatelles à la crème"
+Dessert, "Choisissez entre: Tri de bavarois | 
+Chocolat moelleux | 
+Café/thé à la liqueur "
+Prix total,
+Vin rouge italien (Montepulciano d'abruzzo), "En plus d'une belle couleur rubis, il possède un nez intensément fruité. Agréablement sec et corsé, il se marie bien avec les viandes grillées, les pâtes et les fromages épicés."
+Vin rouge grec (Mavrodaphni de Patra), "Ce vin rouge doux a une belle couleur rubis foncé. La finale contient des arômes et des saveurs de raisins noirs et de prune. Le Mavrodaphni est également connu comme le porto grec. Ce vin rouge doux emmènera vos papilles en vacances en Grèce."
+Vin blanc grec (Tsantali retsina), "Vin retsina blanc et sec. Le nez est vif avec des arômes d'agrumes, de poire, de pomme et de résine de pin fraîche. La bouche est agréable, rafraîchissante et sèche, ce qui conduit à une finale saumâtre."
 Asti,
 Cava,
 Merlot,
@@ -142,7 +142,7 @@ Chardonnay,
 Rosé,
 Limoncello,
 Ouzo,
-Porto red ~ white,
+Porto rouge ~ blanc,
 Amaretto,
 Metaxa 5*,
 Komn Quat,
@@ -154,39 +154,40 @@ Whisky Williams,
 Chivas Regal,
 Whisky Cola (Williams),
 Baccardi Cola,
-Aperitif of the house (cocktail),
-Sherry medium ~ dry,
+Apéritif de la maison (cocktail),
+Sherry moyen ~ sec,
 Cuarenta y tres,
 Baileys,
-Martini red ~ white,
+Martini rouge ~ blanc,
 Martini Royale ~ Bianco ~ Rosato,
 Gin Tonic,
 Campari,
 Campari orange,
-Coffee,
-Tea,
+Café,
+Thé,
 Cappuccino,
-Cafe au lait,
-Hot chocolate,
-Hasselt coffee,
-Coffee with cognac,
-Coffee with amaretto,
-Irish coffee,
+Café au lait,
+Chocolat chaud,
+Café Hasselt,
+Café au cognac,
+Café à l'amaretto,
+Café irlandais,
 Coca-Cola,
 Coca-Cola Light,
 Coca-Cola Zero,
 Fanta,
 Sprite,
-Spa blue/red,
+Spa bleu/rouge,
 "Looza, Looza apple, Looza Ace",
 Gini,
 Tonic,
 Ice Tea,
 Ice Tea Green,
 Schweppes agrum,
-"Choco milk (cold), Fristi",
-Tonissteiner, "Fruit basket, lemon, orange"
-Redbull,Regular/light'''.splitlines()
+"Lait chocolaté (froid), Fristi",
+Tonissteiner, "Corbeille de fruits, citron, orange"
+Redbull,Régulier/léger
+'''.splitlines()
 with open("csvfile.csv", "w") as file:
 	for line in csv.reader(lines, quotechar='"', delimiter=',', quoting=csv.QUOTE_ALL, skipinitialspace=True):
 		writer = csv.writer(file, delimiter=',')
