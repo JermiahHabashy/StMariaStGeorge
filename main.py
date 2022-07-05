@@ -19,7 +19,7 @@ class FoodNL(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
 	name = db.Column(db.String(250), nullable=False)
 	description = db.Column(db.String(250), nullable=True)
-	price = db.Column(db.DECIMAL(5, 2), nullable=False)
+	price = db.Column(db.DECIMAL(5, 2), nullable=True)
 	cat_id = db.Column(db.Integer, db.ForeignKey("categoryNL.cat_id"))
 
 
@@ -33,7 +33,7 @@ class FoodENG(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
 	name = db.Column(db.String(250), nullable=False)
 	description = db.Column(db.String(250), nullable=True)
-	price = db.Column(db.DECIMAL(5, 2), nullable=False)
+	price = db.Column(db.DECIMAL(5, 2), nullable=True)
 	cat_id = db.Column(db.Integer, db.ForeignKey("categoryENG.cat_id"))
 
 
@@ -47,7 +47,7 @@ class FoodFR(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
 	name = db.Column(db.String(250), nullable=False)
 	description = db.Column(db.String(250), nullable=True)
-	price = db.Column(db.DECIMAL(5, 2), nullable=False)
+	price = db.Column(db.DECIMAL(5, 2), nullable=True)
 	cat_id = db.Column(db.Integer, db.ForeignKey("categoryFR.cat_id"))
 
 
