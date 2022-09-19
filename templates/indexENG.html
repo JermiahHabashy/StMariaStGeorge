@@ -55,7 +55,7 @@
                 <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                 <li><a class="nav-link scrollto" href="#about">About us</a></li>
 {#                <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>#}
-                <li><a class="nav-link scrollto" href="#menu">Menu</a></li>
+                <li><a class="nav-link scrollto" href="{{url_for('menu_eng')}}">Menu</a></li>
                 <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
@@ -200,53 +200,8 @@
 {#        </div>#}
 {#    </section><!-- End Gallery Section -->#}
 
-
-    <!-- ======= Menu Section ======= -->
-    <section id="menu" class="menu section-bg">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Menu</h2>
-                <p>Discover our menu</p>
-            </div>
-
-            <div class="row" data-aos="fade-up" data-aos-delay="100">
-                <div class="col-lg-12 d-flex justify-content-center">
-                    <ul id="menu-filters">
-                        {% for cat in all_cat %}
-                            <li data-filter=".filter-{{cat.name.replace(' ', '-').replace('&','-')}}" class="">{{cat.name}}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-            <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
-                {% for cat in all_cat %}
-                {% set food_list = food_list.filter_by(cat_id=cat.cat_id).all() %}
-                {% for food_item in food_list %}
-
-                    <div class="col-lg-6 menu-item filter-{{cat.name.replace(' ', '-').replace('&','-')}}">
-                        <div class="menu-content">
-                                <a href="#">{{food_item.name}}</a>
-	                        {% if food_item.price %}
-		                        <span>€{{food_item.price}}</span>
-	                        {% endif %}
-                        </div>
-                        <div class="menu-ingredients">
-                            {% if food_item.description %}
-                                {{food_item.description}}
-                            {% endif %}
-                        </div>
-                    </div>
-                    {% endfor %}
-                {% endfor %}
-            </div>
-
-        </div>
-    </section>
-    <!-- End Menu Section -->
-
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact section-bg">
         <div class="container aos-init aos-animate" data-aos="fade-up">
 
             <div class="section-title">
@@ -326,7 +281,7 @@
 <!--        </footer>-->
 <!--&lt;!&ndash; End Footer &ndash;&gt;-->
 
-<footer class="section-bg">
+<footer>
 
         <div class="container">
 

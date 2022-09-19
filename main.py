@@ -63,23 +63,38 @@ db.create_all()
 
 @app.route('/')
 def nl():
-	return flask.render_template("indexNL.html",
-								all_cat=db.session.query(CategoryNL).all(),
-								food_list=db.session.query(FoodNL))
+	return flask.render_template("indexNL.html")
 
 
 @app.route('/eng')
 def eng():
-	return flask.render_template("indexENG.html",
-								all_cat=db.session.query(CategoryENG).all(),
-								food_list=db.session.query(FoodENG))
+	return flask.render_template("indexENG.html")
 
 
 @app.route('/fr')
 def fr():
-	return flask.render_template("indexFR.html",
-								all_cat=db.session.query(CategoryFR).all(),
-								food_list=db.session.query(FoodFR))
+	return flask.render_template("indexFR.html")
+
+
+@app.route('/menu')
+def menu_nl():
+	return flask.render_template("menuNL.html",
+								 all_cat=db.session.query(CategoryNL).all(),
+								 food_list=db.session.query(FoodNL))
+
+
+@app.route('/menu_eng')
+def menu_eng():
+	return flask.render_template("menuENG.html",
+								 all_cat=db.session.query(CategoryENG).all(),
+								 food_list=db.session.query(FoodENG))
+
+
+@app.route('/menu_fr')
+def menu_fr():
+	return flask.render_template("menuFR.html",
+								 all_cat=db.session.query(CategoryFR).all(),
+								 food_list=db.session.query(FoodFR))
 
 
 if __name__ == "__main__":
