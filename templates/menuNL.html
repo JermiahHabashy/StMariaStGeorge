@@ -25,6 +25,7 @@
 
     <!-- Template Main CSS File -->
     <link href="../static/assets/css/style.css" rel="stylesheet">
+
 <body>
 
 <!-- ======= Top Bar ======= -->
@@ -42,35 +43,47 @@
 </div>
 
 <!-- ======= Header ======= -->
-<header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+<header id="header" class="fixed-top d-flex justify-content-center">
+	<div class="container">
+		<div class="row row-cols-1">
+			<div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between col">
 
-        <h1 class="logo me-auto me-lg-0"><a href="{{url_for('nl')}}">St.Maria & St.George</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+				<h1 class="logo me-auto me-lg-0"><a href="{{url_for('nl')}}">St.Maria & St.George</a></h1>
+				<!-- Uncomment below if you prefer to use an image logo -->
+				<!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-        <nav id="navbar" class="navbar order-last order-lg-0">
-            <ul>
-                <li><a class="nav-link scrollto active" href="{{url_for('nl')}}#hero">Home</a></li>
-                <li><a class="nav-link scrollto" href="{{url_for('nl')}}#about">Over ons</a></li>
-{#                <li><a class="nav-link scrollto" href="#gallery">Galerij</a></li>#}
-                <li><a class="nav-link scrollto" href="{{url_for('menu_nl')}}">Menu</a></li>
-                <li><a class="nav-link scrollto" href="{{url_for('nl')}}#contact">Contact</a></li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
+				<nav id="navbar" class="navbar order-last order-lg-0">
+					<ul>
+						<li><a class="nav-link scrollto" href="{{url_for('nl')}}##hero">Home</a></li>
+						<li><a class="nav-link scrollto" href="{{url_for('nl')}}#about">Over ons</a></li>
+						{#                <li><a class="nav-link scrollto" href="#gallery">Galerij</a></li>#}
+						<li><a class="nav-link scrollto" href="{{url_for('menu_nl')}}">Menu</a></li>
+						<li><a class="nav-link scrollto" href="{{url_for('nl')}}#contact">Contact</a></li>
+					</ul>
+					<i class="bi bi-list mobile-nav-toggle"></i>
+				</nav><!-- .navbar -->
+			</div>
+			<div id="promo" class="row d-flex text-lg-center">
+				<div class="container">
+					<div class="col">
+						<a href="{{url_for('kerstmenu_nl')}}"><img src="../static/assets/img/snow.svg"/> Ondek ons Kerst- en Nieuwjaarsmenu <img src="../static/assets/img/snow.svg"/></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- End Header -->
 
-    </div>
-</header><!-- End Header -->
 
 <main id="main">
     <!-- ======= Menu Section ======= -->
     <section id="menu" class="menu section-bg">
         <div class="container pt-5" data-aos="fade-up">
 
-            <div class="section-title">
+            <div class="section-title pt-5">
 {#                <h2>Menu</h2>#}
-                <p>Ondek onze menu</p>
+                <p>Ondek ons menu</p>
             </div>
 
             <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -87,7 +100,7 @@
                 {% set food_list = food_list.filter_by(cat_id=cat.cat_id).all() %}
                 {% for food_item in food_list %}
 
-                    <div class="col-lg-6 menu-item filter-{{cat.name.replace(' ', '-').replace('&','-')}}">
+                    <div class="col-lg-6 menu-item filter-{{cat.name.replace(' ', '-').replace('&','-').replace('|','-')}}">
                         <div class="menu-content">
                                 <a href="#">{{food_item.name}}</a>
 	                        {% if food_item.price %}
@@ -127,51 +140,4 @@
 <!--        </footer>-->
 <!--&lt;!&ndash; End Footer &ndash;&gt;-->
 
-<footer>
-
-        <div class="container">
-
-
-          <div class="row mb-5">
-            <div class="col-md-4">
-              <div class="site-logo">
-                <h2>ST.MARIA & ST.GEORGE</h2>
-              </div>
-            </div>
-            <div class="col-md-8">
-              <ul class="social-icons">
-                <li><a href="https://www.facebook.com/pages/category/Pizza-Place/Santa-maria-Saint-george-310128165701734/"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                <li><a href="https://www.instagram.com/st.maria_st.george/"><ion-icon name="logo-instagram"></ion-icon></a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col ">
-              <div class="copyright">
-                <p><small>Copyright © <a href="https://www.habashy.it">habashy.it</a> 2022</small></p>
-              </div>
-            </div>
-          </div>
-
-      </div>
-    </footer>
-
-
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-<!-- Vendor JS Files -->
-<script src="../static/assets/vendor/aos/aos.js"></script>
-<script src="../static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="../static/assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="../static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="../static/assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="../static/assets/vendor/php-email-form/validate.js"></script>
-
-<!-- Template Main JS File -->
-<script src="../static/assets/js/main.js"></script>
-
-
-<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    </body>
-</html>
+{% include "footer.html" %}

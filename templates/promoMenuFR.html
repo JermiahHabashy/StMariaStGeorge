@@ -25,7 +25,6 @@
 
     <!-- Template Main CSS File -->
     <link href="../static/assets/css/style.css" rel="stylesheet">
-
 <body>
 
 <!-- ======= Top Bar ======= -->
@@ -34,8 +33,8 @@
 
         <div class="languages d-none d-md-flex align-items-center">
             <ul>
-                <li><a href="{{url_for('nl')}}">Nederlands</a></li>
-                <li>Français</li>
+                <li>Nederlands</li>
+                <li><a href="{{url_for('fr')}}">Français</a></li>
                 <li><a href="{{url_for('eng')}}">English</a></li>
             </ul>
         </div>
@@ -44,11 +43,9 @@
 
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top d-flex align-items-center">
-		<div class="container">
-		<div class="row row-cols-1">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-        <h1 class="logo me-auto me-lg-0"><a href="{{url_for('fr')}}">St.Maria &amp; St.George</a></h1>
+        <h1 class="logo me-auto me-lg-0"><a href="{{url_for('nl')}}">St.Maria & St.George</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -62,27 +59,18 @@
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
-			</div>
-			<div id="promo" class="row d-flex text-lg-center">
-				<div class="container">
-					<div class="col">
-						<a href="{{url_for('kerstmenu_fr')}}"><img src="../static/assets/img/snow.svg"/> Découvrez notre menu de Noël et de Nouvel An <img src="../static/assets/img/snow.svg"/></a>
-					</div>
-				</div>
-			</div>
-		</div>
+
     </div>
 </header><!-- End Header -->
-
 
 <main id="main">
     <!-- ======= Menu Section ======= -->
     <section id="menu" class="menu section-bg">
         <div class="container pt-5" data-aos="fade-up">
 
-            <div class="section-title pt-5">
+            <div class="section-title text-sm-center pt-5">
 {#                <h2>Menu</h2>#}
-                <p>Découvrez notre menu</p>
+                <p>Découvrez notre menu de Noël et de Nouvel An</p>
             </div>
 
             <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -99,7 +87,7 @@
                 {% set food_list = food_list.filter_by(cat_id=cat.cat_id).all() %}
                 {% for food_item in food_list %}
 
-                    <div class="col-lg-6 menu-item filter-{{cat.name.replace(' ', '-').replace('&','-')}}">
+                    <div class="col-lg-6 menu-item filter-{{cat.name.replace(' ', '-').replace('&','-').replace('|','-')}}">
                         <div class="menu-content">
                                 <a href="#">{{food_item.name}}</a>
 	                        {% if food_item.price %}
