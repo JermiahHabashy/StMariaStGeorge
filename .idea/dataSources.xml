@@ -19,7 +19,7 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="menusBeckup" uuid="ebc9cf7f-b7f1-4dc0-84d4-efcb1083ff2e">
+    <data-source source="LOCAL" name="menusBackup" uuid="ebc9cf7f-b7f1-4dc0-84d4-efcb1083ff2e">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>

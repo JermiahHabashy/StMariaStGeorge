@@ -139,26 +139,26 @@ def menu_fr():
 								 food_list=db.session.query(FoodFR))
 
 
-@app.route('/kerstmenu')
-def kerstmenu_nl():
-	return flask.render_template("promoMenuNL.html",
-								 all_cat=db.session.query(CategoryNLPromo).all(),
-								 food_list=db.session.query(FoodNLPromo))
-
-
-@app.route('/kerstmenu_fr')
-def kerstmenu_fr():
-	return flask.render_template("promoMenuFR.html",
-								 all_cat=db.session.query(CategoryFRPromo).all(),
-								 food_list=db.session.query(FoodFRPromo))
-
-
-@app.route('/kerstmenu_eng')
-def kerstmenu_eng():
-	return flask.render_template("promoMenuENG.html",
-								 all_cat=db.session.query(CategoryENGPromo).all(),
-								 food_list=db.session.query(FoodENGPromo))
-
+# @app.route('/kerstmenu')
+# def kerstmenu_nl():
+# 	return flask.render_template("promoMenuNL.html",
+# 								 all_cat=db.session.query(CategoryNLPromo).all(),
+# 								 food_list=db.session.query(FoodNLPromo))
+#
+#
+# @app.route('/kerstmenu_fr')
+# def kerstmenu_fr():
+# 	return flask.render_template("promoMenuFR.html",
+# 								 all_cat=db.session.query(CategoryFRPromo).all(),
+# 								 food_list=db.session.query(FoodFRPromo))
+#
+#
+# @app.route('/kerstmenu_eng')
+# def kerstmenu_eng():
+# 	return flask.render_template("promoMenuENG.html",
+# 								 all_cat=db.session.query(CategoryENGPromo).all(),
+# 								 food_list=db.session.query(FoodENGPromo))
+#
 
 if __name__ == "__main__":
 	app.run()
