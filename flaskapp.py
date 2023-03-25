@@ -161,7 +161,7 @@ def menu_fr():
 #
 
 if __name__ == "__main__":
-	app.run()
+	app.run(debug="off")
 
 # van txt naar csv
 # import csv
