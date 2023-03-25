@@ -57,7 +57,7 @@ class CategoryFR(db.Model):
 	foods = db.relationship("FoodFR", backref="categoryFR")
 
 
-class CategoryNLPromo(db.Model):
+""" class CategoryNLPromo(db.Model):
 	cat_id = db.Column(db.Integer, primary_key=True)
 	name = db.Column(db.String(250), nullable=False)
 	foods = db.relationship("FoodNLPromo", backref="category_nl_promo")
@@ -97,7 +97,7 @@ class FoodENGPromo(db.Model):
 	description = db.Column(db.String(250), nullable=True)
 	price = db.Column(db.DECIMAL(5, 2), nullable=True)
 	cat_id = db.Column(db.Integer, db.ForeignKey("category_eng_promo.cat_id"))
-
+  """
 
 db.session.commit()
 db.create_all()
