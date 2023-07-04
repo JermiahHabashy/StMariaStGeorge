@@ -50,28 +50,20 @@
         <h1 class="logo me-auto me-lg-0"><a href="{{url_for('fr')}}">St.Maria &amp; St.George</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
         <nav id="navbar" class="navbar order-last order-lg-0">
             <ul>
                 <li><a class="nav-link scrollto active" href="#hero">Accueil</a></li>
                 <li><a class="nav-link scrollto" href="#about">A propos de nous</a></li>
-{#                <li><a class="nav-link scrollto" href="#gallery">Galerie</a></li>#}
                 <li><a class="nav-link scrollto" href="{{url_for('menu_fr')}}">Menu</a></li>
                 <li><a class="nav-link scrollto" href="#contact">Contactez</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
 			</div>
-{#			<div id="promo" class="row d-flex text-lg-center">#}
-{#				<div class="container">#}
-{#					<div class="col">#}
-{#						<a href="{{url_for('kerstmenu_fr')}}"><img src="../static/assets/img/snow.svg"/> Découvrez notre menu de Noël et de Nouvel An <img src="../static/assets/img/snow.svg"/></a>#}
-{#					</div>#}
-{#				</div>#}
-{#			</div>#}
 		</div>
     </div>
-</header><!-- End Header -->
+</header>
+<!-- End Header -->
 
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex align-items-center">
@@ -94,7 +86,6 @@
                 <h2>A propos de nous</h2>
                 <p>Bienvenue à St.Maria & St.George</p>
             </div>
-
             <div class="row justify-content-sm-center align-items-center text-sm-center text-lg-start">
                 <div class="col-4 order-1 order-lg-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
                     <div class="about-img">
@@ -109,122 +100,22 @@
 					</p><p>
 					Aujourd'hui, Emil est toujours derrière la cuisinière et sa femme Mervat vous accueille avec tout l'amour d'une hôtesse. À St. Maria & St. George, la bonne nourriture fraîche, la famille et l'amitié sont les mots clés, et avec un large menu, il y en a pour tous les goûts.
                     </p><p class="fw-bold">~The fondest memories are made gathered around the table~</p>
-
-
-{#                    <ul>#}
-{#                        <li><i class="bi bi-check-circle"></i> Rustige en luxe sfeer</li>#}
-{#                        <li><i class="bi bi-check-circle"></i> Garantie op topkwaliteit <a href="https://www.tripadvisor.be/Restaurant_Review-g641789-d14013755-Reviews-Santa_Maria_Saint_George-Lommel_Limburg_Province.html">(zie wat onze klanten zeggen)</a></li>#}
-{#                        <li><i class="bi bi-check-circle"></i> Eerlijke prijs</li>#}
-{#                    </ul>#}
-{#                    <p>#}
-{#                        Of je nu kiest voor Jack Daniels Honey spareribs (met echte Jack Daniels!) of voor de klassieke, Italiaanse pizza, wij doen er alles aan om jou een topervaring aan te bieden en zijn pas tevreden als u dat bent!#}
-{##}
-{#                    </p>#}
                 </div>
             </div>
-
         </div>
     </section><!-- End About Section -->
-
-{#    <!-- ======= Gallery Section ======= -->#}
-{#    <section id="gallery" class="gallery">#}
-{##}
-{#        <div class="container aos-init aos-animate" data-aos="fade-up">#}
-{#            <div class="section-title">#}
-{#                <h2>Galerie</h2>#}
-{#                <p>Quelques photos de notre restaurant</p>#}
-{#            </div>#}
-{#        </div>#}
-{##}
-{#        <div class="container-fluid aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">#}
-{##}
-{#            <div class="row g-0">#}
-{##}
-{#                <div class="col-lg-3 col-md-4">#}
-{#                    <div class="gallery-item">#}
-{#                        <a href="../static/assets/img/gallery/gallery-1.jpg" class="gallery-lightbox" data-gall="gallery-item">#}
-{#                            <img src="../static/assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid" title="" style="">#}
-{#                        </a>#}
-{#                    </div>#}
-{#                </div>#}
-{##}
-{#                <div class="col-lg-3 col-md-4">#}
-{#                    <div class="gallery-item">#}
-{#                        <a href="../static/assets/img/gallery/gallery-2.jpg" class="gallery-lightbox" data-gall="gallery-item">#}
-{#                            <img src="../static/assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid" title="" style="">#}
-{#                        </a>#}
-{#                    </div>#}
-{#                </div>#}
-{##}
-{#                <div class="col-lg-3 col-md-4">#}
-{#                    <div class="gallery-item">#}
-{#                        <a href="../static/assets/img/gallery/gallery-3.jpg" class="gallery-lightbox" data-gall="gallery-item">#}
-{#                            <img src="../static/assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid" title="" style="">#}
-{#                        </a>#}
-{#                    </div>#}
-{#                </div>#}
-{##}
-{#                <div class="col-lg-3 col-md-4">#}
-{#                    <div class="gallery-item">#}
-{#                        <a href="../static/assets/img/gallery/gallery-4.jpg" class="gallery-lightbox" data-gall="gallery-item">#}
-{#                            <img src="../static/assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid" title="" style="">#}
-{#                        </a>#}
-{#                    </div>#}
-{#                </div>#}
-{##}
-{#                <div class="col-lg-3 col-md-4">#}
-{#                    <div class="gallery-item">#}
-{#                        <a href="../static/assets/img/gallery/gallery-5.jpg" class="gallery-lightbox" data-gall="gallery-item">#}
-{#                            <img src="../static/assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">#}
-{#                        </a>#}
-{#                    </div>#}
-{#                </div>#}
-{##}
-{#                <div class="col-lg-3 col-md-4">#}
-{#                    <div class="gallery-item">#}
-{#                        <a href="../static/assets/img/gallery/gallery-6.jpg" class="gallery-lightbox" data-gall="gallery-item">#}
-{#                            <img src="../static/assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid" title="" style="">#}
-{#                        </a>#}
-{#                    </div>#}
-{#                </div>#}
-{##}
-{#                <div class="col-lg-3 col-md-4">#}
-{#                    <div class="gallery-item">#}
-{#                        <a href="../static/assets/img/gallery/gallery-7.jpg" class="gallery-lightbox" data-gall="gallery-item">#}
-{#                            <img src="../static/assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid" title="" style="">#}
-{#                        </a>#}
-{#                    </div>#}
-{#                </div>#}
-{##}
-{#                <div class="col-lg-3 col-md-4">#}
-{#                    <div class="gallery-item">#}
-{#                        <a href="../static/assets/img/gallery/gallery-8.jpg" class="gallery-lightbox" data-gall="gallery-item">#}
-{#                            <img src="../static/assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid" title="" style="">#}
-{#                        </a>#}
-{#                    </div>#}
-{#                </div>#}
-{##}
-{#            </div>#}
-{##}
-{#        </div>#}
-{#    </section><!-- End Gallery Section -->#}
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact section-bg">
         <div class="container aos-init aos-animate" data-aos="fade-up">
-
             <div class="section-title">
                 <h2>Contactez</h2>
                 <p>Nous contacter</p>
             </div>
         </div>
 
-
-
         <div class="container aos-init aos-animate" data-aos="fade-up">
-
             <div class="row mt-5">
-
                 <div class="col-lg-4">
                     <div class="info">
                         <div class="address">
@@ -254,41 +145,19 @@
                                 011 60 64 85</p>
                             <br>
                         </div>
-
                     </div>
-
                 </div>
-
                 <div class="col-lg-8">
-
-                           <div data-aos="fade-up" class="aos-init aos-animate">
-            <iframe style="border:0; width: 100%; height: 370px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.377589420168!2d5.307077415905074!3d51.23054053872888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6d33b115cba35%3A0xef32b066a3acd36!2sSanta%20Maria!5e0!3m2!1sen!2sbe!4v1647864833600!5m2!1sen!2sbe" frameborder="0" allowfullscreen=""></iframe>
-        </div>
-
+                    <div data-aos="fade-up" class="aos-init aos-animate">
+                    <iframe style="border:0; width: 100%; height: 370px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.377589420168!2d5.307077415905074!3d51.23054053872888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6d33b115cba35%3A0xef32b066a3acd36!2sSanta%20Maria!5e0!3m2!1sen!2sbe!4v1647864833600!5m2!1sen!2sbe" frameborder="0" allowfullscreen=""></iframe>
                 </div>
-
             </div>
-
         </div>
-    </section><!-- End Contact Section -->
+    </div>
+    </section>
+    <!-- End Contact Section -->
 
-</main><!-- End #main -->
+</main>
+<!-- End #main -->
 
-<!--&lt;!&ndash; ======= Footer ======= &ndash;&gt;-->
-<!--<footer class="footer py-4 section-bg">-->
-<!--            <div class="container-fluid">-->
-<!--                <div class="row">-->
-<!--                    <div class="col-sm-1 col-md-3 col-lg-3"><p>Copyright © <a href="https://www.habashy.it">habashy.it</a> 2022</p></div>-->
-<!--                    <div class="col-sm-1 col-md-3 col-lg-3">-->
-<!--                        <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/TheMetataurArmy"><svg class="svg-inline&#45;&#45;fa fa-twitter fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>&lt;!&ndash; <i class="fab fa-twitter"></i> Font Awesome fontawesome.com &ndash;&gt;</a>-->
-<!--                        <a class="btn btn-dark btn-social mx-2" href="#!"><svg class="svg-inline&#45;&#45;fa fa-facebook-f fa-w-10" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>&lt;!&ndash; <i class="fab fa-facebook-f"></i> Font Awesome fontawesome.com &ndash;&gt;</a>-->
-<!--                        <a class="btn btn-dark btn-social mx-2" href="#!"><svg class="svg-inline&#45;&#45;fa fa-linkedin-in fa-w-14" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>&lt;!&ndash; <i class="fab fa-linkedin-in"></i> Font Awesome fontawesome.com &ndash;&gt;</a>-->
-<!--                    </div>-->
-<!--                    <div class="col-sm-1 col-md-3 col-lg-3">-->
-<!--                        <p>Alle rechten voorbehouden</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </footer>-->
-<!--&lt;!&ndash; End Footer &ndash;&gt;-->
 {% include "footer.html" %}
